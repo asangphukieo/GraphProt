@@ -17,7 +17,7 @@ Trained from CLIP-seq data from 2 different sources
 	awk -F',' '{print $10,$11,$8}' 02_41467_2017_1613_MOESM3_ESM.csv |sort -u > 02_coordinate.coo
 
 3. extract FASTA sequence using coordinate files (below script require biopython)
-	## requirement [1] Genome in FASTA, [2] Start,Stop position,Strand of CLIP peak region (in 3 columns separated by tab) [3] include 'Franking' or 'NotFranking' region , [4] determine total length of sequence if use 'Franking' , [5] 'Random' or 'NoRandom' start and stop position (keep seq length identical to original coordinate) , [6] output file , [7] excluding longer sequences (CLIP peak region)
+	Script requirement [1] Genome in FASTA, [2] Start,Stop position,Strand of CLIP peak region (in 3 columns separated by tab) [3] include 'Franking' or 'NotFranking' region , [4] determine total length of sequence if use 'Franking' , [5] 'Random' or 'NoRandom' start and stop position (keep seq length identical to original coordinate) , [6] output file , [7] excluding longer sequences (CLIP peak region)
 
 	python extract_sequence_by_coordinate2.py FQ312003.fasta 01_coordinate.coo 'Franking' 150 'NoRandom' 01_pos.fasta 100
 	python extract_sequence_by_coordinate2.py GCF_000005845.2_ASM584v2_genomic.fna 02_coordinate.coo 'Franking' 150 'NoRandom' 02_pos.fasta 100
