@@ -47,4 +47,6 @@ GraphProt.pl \
 --prefix   GraphProtCsrA/csrA_B_subtilis \
 --params   GraphProtCsrA/csrA.params
 
-
+## Check motif available (e.g. 'GGA[ACGT]{4,70}GGA[ACGT]{2,12}' for csrA binding motif)
+1. run script in folder 'pattern_search'
+	1. python GGA_regex.py input_fasta output_name
