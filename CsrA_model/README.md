@@ -34,8 +34,8 @@ Trained from CLIP-seq data from 2 different sources
 ## Model performance ##
 1. use 10% of data to tune parameter
 2. use 10-fold cross validation to observe model performance on 90% of data
-	ROC	0.7976
-	APR	0.7888
+	1. ROC	0.7976
+	2. APR	0.7888
 
 ## Use model to predict CsrA in Bacillus Subtilis ##
 1. run trained model [csrA.model] in folder GraphProtCsrA
